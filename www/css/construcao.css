@@ -1,0 +1,178 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+
+body {
+	margin: 30px 0 0 0;
+	padding: 0;
+	background: #FFFFFF url(../img/img01.gif) repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #3E3E3E;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p, ul, ol {
+	margin: 0 0 2em 0;
+	text-align: justify;
+	line-height: 26px;
+	font-size: 15px;
+}
+
+a:link {
+	color: #0C3C88;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #003448;
+}
+
+a:visited {
+	color: gray;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+
+
+
+/* Header */
+
+#header {
+	width: 545px;
+	height: 90px;
+	margin: 0 auto 40px auto;
+	/*background: url(../img/img03.gif) repeat-x left bottom;*/ 
+}
+
+#logo {
+	margin-top: 18px;
+	float: left;
+}
+
+#logo h1 {
+	font-size: 38px;
+	color: #494949;
+}
+
+#logo h1 sup {
+	vertical-align: text-top;
+	font-size: 24px;
+}
+
+#logo h1 a {
+	color: #494949;
+}
+
+#logo h2 {
+	margin-top: -2px;
+	font-size: 13px;
+	color: #A0A0A0;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+
+
+/* Page */
+
+#page {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#page h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+#page h2 {
+	text-align: center;
+	font-weight: bold;
+}
+
+#content {
+	width: 250px;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+#footer {
+	height: 400px;
+	min-height: 400px;
+	padding: 130px 0 0 0;
+	background: #003448 url(../img/img09.gif) repeat-x;
+}
+
+html>body #footer {
+	height: auto;
+}
+
+#footer .wrap {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#legal {
+	clear: both;
+	padding-top: 60px;
+	text-align: center;
+	color: #375C69;
+}
+
+#legal a {
+	color: #476B77;
+}
+
+#fbox1, #fbox2, #fbox3 {
+	float: left;
+}
+
+#fbox1 {
+	width: 310px;
+}
+
+#fbox2 {
+	width: 20%;
+}
+
+#fbox3 {
+	width: 20%;
+	padding-left: 100px;
+}
