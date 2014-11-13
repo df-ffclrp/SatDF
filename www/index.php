@@ -1,10 +1,9 @@
 <?php
-require("includes/functions.php");
-
 # Inicializa variáveis de menu
 require_once ("includes/resetvars.php");
-# Pega nome da página para ativar o menu CSS
-$index = active();
+
+# Ativando menu ativo no CSS
+$index = 'class="active"';
 
 # Inclui cabeçalho
 include("includes/header.php");
