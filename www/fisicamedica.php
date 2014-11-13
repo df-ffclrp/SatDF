@@ -1,5 +1,4 @@
 <?php
-require("includes/functions.php");
 
 # Inicializa variáveis de menu
 require_once ("includes/resetvars.php");
