@@ -14,10 +14,12 @@
 <!-- start header -->
 <div id="header">
 	<img src="img/logo_site.png" alt="" width="100" height="100" class="left" />
+	
 	<div id="logo">
-		<h1><a href="#">Departamento de Física</a></h1>
-		<h2>Faculdade de Filosofia Ciências e Letras de Ribeirão Preto</h2>
+		<h1><a href="http://df.ffclrp.usp.br">Departamento de Física</a></h1>
+		<h2><a href="http://www.ffclrp.usp.br" title="Faculdade de Filosofia Ciências e Letras de Ribeirão Preto" target="_blank">Faculdade de Filosofia Ciências e Letras de Ribeirão Preto</a></h2>
 	</div>
+	
 	<div id="menu">
 		<ul>
 			<li <?= $index ?> ><a href="index.php"> home</a></li>
