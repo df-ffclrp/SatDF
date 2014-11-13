@@ -35,20 +35,15 @@
 <div id="page">
 <!-- start sidebar -->
 	<div id="sidebar">
-		<ul>
-			<li>
-				<h2><strong>Links úteis</strong></h2>
-				<ul>
-					<li><a href="http://df.ffclrp.usp.br/oficina/" title="Sistema de Atendimento Técnico"target="_blank">Atendimento Técnico</a></li>
-					<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>					
-					<li><a href="construcao.html">Orientações Estágio</a></li>
-					<li><a href="construcao.html">FAQ / Procedimentos</a></li>
-					<li><a href="construcao.html">Material Institucional</a></li>
-					<li><a href="http://sites.ffclrp.usp.br/cefim/" title="Página do Centro Estudantil da Física Médica" target="_blank">CEFIM</a></li>
-					<li><a href="http://correio.usp.br" target="_blank">Webmail</a></li>
-				</ul>
-			</li>
-			
-		</ul>
+		<h2><strong>Links úteis</strong></h2>
+			<ul>
+				<li><a href="http://df.ffclrp.usp.br/oficina/" title="Sistema de Atendimento Técnico"target="_blank">Atendimento Técnico</a></li>
+				<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>					
+				<li><a href="construcao.html">Orientações Estágio</a></li>
+				<li><a href="construcao.html">FAQ / Procedimentos</a></li>
+				<li><a href="construcao.html">Material Institucional</a></li>
+				<li><a href="http://sites.ffclrp.usp.br/cefim/" title="Página do Centro Estudantil da Física Médica" target="_blank">CEFIM</a></li>
+				<li><a href="http://correio.usp.br" target="_blank">Webmail</a></li>
+			</ul>
 	</div>
 	<!-- end sidebar -->

@@ -188,27 +188,27 @@ img.right {
 	width: 160px;
 }
 
-#sidebar ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+	#sidebar ul {
+		margin: 0;
+		padding: 0;
+	}
 
-#sidebar li {
-	margin-bottom: 40px;
-}
-
-#sidebar li ul {
-}
-
-#sidebar li li {
-	margin: 0;
-}
+		#sidebar li {
+			color: #0C3C88;
+		}
+			#sidebar a:link {
+				text-decoration: none;
+			}
+			
+			#sidebar a:hover {
+				text-decoration: underline;			
+			}
 
 #sidebar h2 {
 	margin-bottom: 10px;
 	background: url(../img/img03.gif) repeat-x left bottom;
 	font-size: 16px;
+	
 }
 
 /* Boxes */
