@@ -37,7 +37,7 @@
 	<div id="sidebar">
 		<h2><strong>Links úteis</strong></h2>
 			<ul>
-				<li><a href="http://df.ffclrp.usp.br/oficina/" title="Sistema de Atendimento Técnico"target="_blank">Atendimento Técnico</a></li>
+				<li><a href="http://df.ffclrp.usp.br/sat/" title="Serviço de Atendimento Técnico" target="_blank">Atendimento Técnico</a></li>
 				<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>					
 				<li><a href="construcao.html">Orientações Estágio</a></li>
 				<li><a href="construcao.html">FAQ / Procedimentos</a></li>
