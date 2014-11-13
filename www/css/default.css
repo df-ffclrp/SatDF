@@ -231,8 +231,13 @@ img.right {
 	list-style: none;
 }
 
-.box2 a:link, .box2 a:hover, .box2 a:active, .box2 a:visited  {
+.box2 a:link, .box2 a:active, .box2 a:visited  {
 	color: #EDEDED;
+	text-decoration: none;
+}
+
+.box2 a:hover {
+	text-decoration: underline;
 }
 
 /* Footer */
