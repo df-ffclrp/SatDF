@@ -85,9 +85,9 @@ include("includes/header.php");
 						
 						<p>Para saber mais sobre o ingresso na USP acesse: 
 						
-						<br /><a href="http://www.prpg.usp.br" target="_blank">Programa de Pós-Graduação</a>
+							<br /><a href="http://www5.usp.br/ensino/graduacao/" title="Informações sobre a Graduação na USP" target="_blank" >Graduação da USP</a>
 						
-						<br /><a href="http://www.facebook.com/vocetambempodeUSP" target="_blank">Página do Facebook</a>
+							<br /><a href="http://www.facebook.com/vocetambempodeUSP" title="Página do Facebook da USP" target="_blank">Página do Facebook</a>
 						
 						</p>
 						
