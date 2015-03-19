@@ -10,11 +10,9 @@ include("includes/header.php");
 ?>
 	
 	<!-- start content -->
-	<div id="content">
-		
-		<div class="post">
-			<h1 class="title">Apresentação</h1>
-			<div class="entry">
+	<div class="conteudo">
+
+			<h1>Apresentação</h1>
 				        
 			<p>Seja bem vindo! Nesse espaço estão disponíveis várias informações a respeito do 
 			Departamento de Física (DF) da Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto (FFCLRP).</p>
@@ -28,13 +26,10 @@ include("includes/header.php");
 			Esse curso foi o primeiro nesta especialidade a ser oferecido na América Latina.</p>
 			
 			<p>Para saber mais sobre o curso de graduação, acesse a <a href="fisicamedica.php" title="Ir para página do curso de Física Médica" >página do curso</a>.</p>
-				
-			</div>
 		</div>
-	</div>
 	
 	<!-- end content -->
-	
+</section>
 
 <?php
 include("includes/footer.html")
