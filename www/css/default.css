@@ -4,7 +4,6 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
-
 * {
 /*border: 1px solid red;*/
 margin:0;
@@ -130,10 +129,12 @@ header {
 		list-style: none;
 		text-align: center;
 		
+		
 	}
 
 		nav li {
 			display: inline-block;
+			
 		}
 		
 		nav ul li:nth-child(1) a {
@@ -141,20 +142,19 @@ header {
       }
 
 			nav a {
-				display: inline-block;
-				/*float: left;*/
 				margin-left: 30px;
-		/*		padding: 7px 7px 3px 7px;*/
 				text-decoration: none;
-				font-size: 16px;
+				font-size: 22px;
 				color: #000;
+				padding-bottom: 10px;
 			}
 		
       
-	nav a:hover {
-/*		text-decoration: underline;*/
+	nav a:hover,nav .active a {
+
 /*		background: url(../img/img02.gif) repeat-x left bottom;*/
-		border-bottom: 5px solid #0C3C88;
+		/*border-bottom: 5px solid #0C3C88;*/
+		border-bottom: 5px solid orange;
 		
 	}
 	
@@ -162,10 +162,7 @@ header {
 		color: black;	
 	}
 
-	nav .active a {
-/*		background: url(../img/img02.gif) repeat-x left bottom;*/
-		border-bottom: 5px solid #0C3C88;
-	}
+	
 /*=====================
 
 	CORPO DO SITE
@@ -174,7 +171,7 @@ header {
 
 
 section {
-	margin: 0 auto;
+	margin: 50px auto;
 	max-width: 800px;
 }
 
@@ -236,80 +233,69 @@ section {
 				text-decoration: underline;
 				color: orangered;		
 			}
+/* ===============
+
+	Footer 
+
+=================*/
 
 
-/* Boxes */
+footer {
+	
+	border-top: 10px solid #D8D8D8;
+	padding-top: 50px;
+	background-color: #003448;
 
-.box2 {
-	color: #BABABA;
 }
 
-.box2 h2 {
+footer .wrap {
+	/*border: 1px solid red;	*/
+	width: 70%;
+	margin: 0 auto;
+	background-color: #003448;
+}
+
+
+.wrap h2 {
+	font-family: 'Play', sans-serif;	
 	margin-bottom: 15px;
 	background: url(../img/img10.gif) repeat-x left bottom;
-	font-size: 16px;
-	color: #FFFFFF;
+	font-size: 20px;
+	color: orange;
 }
 
-.box2 ul {
+.wrap ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-	.box2 a:link, .box2 a:active, .box2 a:visited  {
-		color: #EDEDED;
+	.wrap a:link, .wrap a:active, .wrap a:visited  {
+		color: white;
 		text-decoration: none;
 	}
 
-	.box2 a:hover {
+	.wrap a:hover {
 		text-decoration: underline;
 	}
 
 
-/* Footer */
+	#fbox1, #fbox2 {
+		width: 20%;		
+		float: left;	
+	}
+	
+	#fbox2 {
+		padding-left: 5%;
+	}
+	
 
-footer {
-	/*height: 400px;*/
-	border-top: 5px solid #D8D8D8;
-	min-height: 500px;
-	padding: 50px 0 0 0;
-	background-color: #003448;
-/*	background: #003448 url(../img	/img09.gif) repeat-x left bottom;*/
-}
-
-
-
-footer .wrap {
-	background-color: #003448;
-	width: 60%;
-	margin: 0 auto;
-}
 
 #legal {
 	clear: both;
 	padding-top: 60px;
+	padding-bottom: 40px;
+	margin: 0 auto;
 	text-align: center;
 	color: #375C69;
-}
-
-#legal a {
-	color: #476B77;
-}
-
-#fbox1, #fbox2, #fbox3 {
-	float: left;
-}
-
-#fbox1 {
-	width: 310px;
-}
-
-#fbox2 {
-	width: 20%;
-}
-
-#fbox3 {
-	width: 20%;
-	padding-left: 100px;
 }
