@@ -1,43 +1,50 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Departamento de Física - FFCLRP - USP</title>
+	<meta charset="utf-8" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-
+	
+	<title>Departamento de Física - FFCLRP - USP</title>
+	
 	<link href="css/default.css" rel="stylesheet" type="text/css" />
 	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+	
+	<!--	Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body class="center">
 
 <!-- start header -->
-<div id="header">
-	<img src="img/logo_site.png" alt="" width="100" height="100" class="left" />
+<header>
+	<img src="img/logo_site.png" alt="Logo USP" width="100" height="100" class="left" />
 	
 	<div id="logo">
 		<h1><a href="http://df.ffclrp.usp.br">Departamento de Física</a></h1>
-		<h2><a href="http://www.ffclrp.usp.br" title="Faculdade de Filosofia Ciências e Letras de Ribeirão Preto" target="_blank">Faculdade de Filosofia Ciências e Letras de Ribeirão Preto</a></h2>
+		<h2>FFCLRP</h2>
 	</div>
 	
-	<div id="menu">
+	<nav>
+	
 		<ul>
 			<li <?= $index ?> ><a href="index.php"> home</a></li>
 			<li <?= $cursos ?> ><a href="cursos.php">cursos</a></li>
 			<li <?= $pesquisa ;?> ><a href="construcao.html">pesquisa</a></li>
 			<li <?= $quem ;?> ><a href="construcao.html">quem faz?</a></li>
 			<li <?= $contato ;?> ><a href="construcao.html">contato</a></li>
+			
 		</ul>
-	</div>
-</div>
+	</nav>
+	
+</header>
 <!-- end header -->
 
-
-<!-- start page -->
-<div id="page">
+<section>
+	
 <!-- start sidebar -->
-	<div id="sidebar">
-		<h2><strong>Links úteis</strong></h2>
+<!--	<div id="sidebar">
+		<h2>&nbsp;</h2>
 			<ul>
 				<li><a href="http://df.ffclrp.usp.br/sat/" title="Serviço de Atendimento Técnico" target="_blank">Atendimento Técnico</a></li>
 				<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>					
@@ -47,5 +54,6 @@
 				<li><a href="http://sites.ffclrp.usp.br/cefim/" title="Página do Centro Estudantil da Física Médica" target="_blank">CEFIM</a></li>
 				<li><a href="http://correio.usp.br" target="_blank">Webmail</a></li>
 			</ul>
-	</div>
+	</div>-->
+
 	<!-- end sidebar -->

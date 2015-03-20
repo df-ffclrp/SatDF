@@ -1,5 +1,5 @@
 <?php
 # Reseta variáveis de menu
-$index = $contato = $quem = $cursos = $pesquisa = '';
+$uteis = $index = $contato = $quem = $cursos = $pesquisa = '';
 
 ?>

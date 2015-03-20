@@ -4,195 +4,218 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
-/** {
-border: 1px solid red;
+
+* {
+/*border: 1px solid red;*/
+margin:0;
+padding:0;
 }
-*/
+
+/*=========================
+Configurações Básicas
+======================*/
+
+
 body {
-	margin: 30px 0 0 0;
+	
 	padding: 0;
 	background: #FFFFFF url(../img/img01.gif) repeat-x;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 30px;
-	color: #333333;
+/*	color: #333333;*/
+	color: #000;
+/*	border: 1px solid green;*/
 }
 
-h1, h2, h3 {
-	margin: 0;
-	font-weight: normal;
-	color: #3E3E3E;
-}
-
-h1 {
-	font-size: 32px;
-}
-
-h2 {
-	font-size: 23px;
-}
-
-p, ul, ol {
-	margin: 0 0 2em 0;
-	text-align: justify;
-	line-height: 26px;
-	font-size: 15px;
-}
-
-a:link {
-	color: #0C3C88;
-}
-
-a:hover, a:active {
-	text-decoration: none;
-	color: #003448;
-}
-
-a:visited {
-	color: gray;
-}
-
-img {
-	border: none;
-}
-
-img.left {
-	float: left;
-	margin-right: 15px;
-}
-
-img.right {
-	float: right;
-	margin-left: 15px;
-}
-
-
-/* Header */
-
-#header {
-	width: 60%;
-	height: 90px;
-	margin: 0 auto 40px auto;
-	/*background: url(../img/img03.gif) repeat-x left bottom;*/ 
-}
-
-#logo {
-	margin-top: 18px;
-	float: left;
-}
-
-#logo h1 {
-	font-size: 38px;
-	color: #494949;
-}
-
-#logo h1 sup {
-	vertical-align: text-top;
-	font-size: 24px;
-}
-
-#logo h1 a {
-	color: #494949;
-}
-
-#logo h2 {
-	margin-top: -2px;
-	font-size: 13px;
-	color: #A0A0A0;
-}
-
-#logo a {
-	text-decoration: none;
-}
-
-/* Menu */
-
-#menu {
-	float: right;
-}
-
-#menu ul {
-	margin: 0;
-	padding: 15px 0 0 0;
-	list-style: none;
-}
-
-#menu li {
-	display: inline;
-}
-
-#menu a {
-	display: block;
-	float: left;
-	margin-left: 30px;
-	padding: 7px;
-	text-decoration: none;
-	font-size: 13px;
-	color: #000000;
-}
-
-#menu a:hover {
-	text-decoration: underline;
-}
-
-#menu .active a {
-	background: url(../img/img02.gif) repeat-x left bottom;
-}
-
-/* Page */
-
-#page {
-	width: 60%;
+.center {
 	margin: 0 auto;
+	
 }
 
-/* Content */
+	h1, h2, h3 {
+		margin: 0;
+		font-weight: normal;
+		color: #3E3E3E;
+	}
 
-#content {
-	float: right;
-	width: 850px;
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 23px;
+	}
+	
+	p, ul, ol {
+		margin: 0 0 2em 0;
+		text-align: justify;
+		line-height: 26px;
+		font-size: 20px;
+	}
+
+	a:link {
+		color: #0C3C88;
+	}
+	
+	a:hover, a:active {
+		text-decoration: none;
+		color: #003448;
+	}
+	
+	a:visited {
+		color: gray;
+	}
+	
+	img {
+		border: none;
+	}
+
+/* ================================== 
+	Header
+=================================== */
+
+header {
+	max-width: 800px; /* para layout fluido: 1200px / 1200px = 1 = 100% */
+	margin: 20px auto 0 auto;
+
+	
+/*	background: url(../img/img03.gif) repeat-x left bottom; */
 }
 
-/* Post */
+	header img {
+		margin: 0 auto;;
+		display: block;
+	}
+	
+	#logo {
+		width: 100%;
+	}
 
-.post {
+		#logo h1 {
+			text-align: center;
+			font-family: 'Play', sans-serif;
+			font-size: 38px;
+		}
+		#logo h1 a{
+			color: black;
+			/*	Laranjinha daora
+			color: #5789C1;
+			*/
+		}
+
+			#logo h2 {
+				margin: 0 auto;
+				text-align: center;
+				font-size: 25px;
+/*				color: #A0A0A0;*/
+				color: #7999C4;
+			}
+
+			#logo a {
+				text-decoration: none;
+			}
+
+/* =========================
+			 Menu Superior
+  ========================= */
+
+	nav {
+/*		margin: 0 auto;*/
+		font-family: 'Play', sans-serif;
+	}
+
+	nav ul {
+		
+		margin: 10px auto;
+		list-style: none;
+		text-align: center;
+		
+	}
+
+		nav li {
+			display: inline-block;
+		}
+		
+		nav ul li:nth-child(1) a {
+      	margin-left: 0%; /* Margem à esquerda do 1º elemento da lista tem valor 0 */
+      }
+
+			nav a {
+				display: inline-block;
+				/*float: left;*/
+				margin-left: 30px;
+		/*		padding: 7px 7px 3px 7px;*/
+				text-decoration: none;
+				font-size: 16px;
+				color: #000;
+			}
+		
+      
+	nav a:hover {
+/*		text-decoration: underline;*/
+/*		background: url(../img/img02.gif) repeat-x left bottom;*/
+		border-bottom: 5px solid #0C3C88;
+		
+	}
+	
+	nav a:visited, nav a:link {
+		color: black;	
+	}
+
+	nav .active a {
+/*		background: url(../img/img02.gif) repeat-x left bottom;*/
+		border-bottom: 5px solid #0C3C88;
+	}
+/*=====================
+
+	CORPO DO SITE
+
+=====================*/
+
+
+section {
+	margin: 0 auto;
+	max-width: 800px;
 }
 
-.post .title {
+
+/* ======================= 
+		Conteudo 
+========================*/
+
+.conteudo {
+	max-width: 100%;
+	padding: 2%;
+/*	padding-right: 1%;*/
+}
+
+.conteudo h1 {
+	text-align: center;
 	margin-bottom: 20px;
 	padding-bottom: 5px;
 	background: url(../img/img03.gif) repeat-x left bottom;
 }
 
-.post .entry {
-}
 
-.post .meta {
-	padding: 15px 0 60px 0;
-	background: url(../img/img03.gif) repeat-x;
-}
-
-.post .meta p {
-	margin: 0;
-	line-height: normal;
-	color: #999999;
-}
-
-.post .meta b {
-	display: none;
-}
-
-/* Sidebar */
+/* ====================== 
+		Sidebar
+========================= */
 
 #sidebar {
+	display: none;
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
 	float: left;
-	width: 160px;
+	margin-left: 20px;
+	width: 16,666666667%; /*Layout fluido: largura inicial: 200px / 1200px =~ 16%*/
 }
 
 #sidebar h2 {
 	margin-bottom: 10px;
-	background: url(../img/img03.gif) repeat-x left bottom;
-	font-size: 16px;
 	
+/*	background: url(../img/img03.gif) repeat-x left bottom;*/
+	font-size: 16px;
+	border-bottom: 5px solid #0C3C88;
 }
 	#sidebar ul {
 		margin: 0;
@@ -206,10 +229,13 @@ img.right {
 				text-decoration: none;
 			}
 			
-			#sidebar a:hover {
-				text-decoration: underline;			
+			#sidebar a:visited {
+				color: #0C3C88;	
 			}
-
+			#sidebar a:hover {
+				text-decoration: underline;
+				color: orangered;		
+			}
 
 
 /* Boxes */
@@ -231,29 +257,31 @@ img.right {
 	list-style: none;
 }
 
-.box2 a:link, .box2 a:active, .box2 a:visited  {
-	color: #EDEDED;
-	text-decoration: none;
-}
+	.box2 a:link, .box2 a:active, .box2 a:visited  {
+		color: #EDEDED;
+		text-decoration: none;
+	}
 
-.box2 a:hover {
-	text-decoration: underline;
-}
+	.box2 a:hover {
+		text-decoration: underline;
+	}
+
 
 /* Footer */
 
-#footer {
-	height: 400px;
-	min-height: 400px;
-	padding: 130px 0 0 0;
-	background: #003448 url(../img/img09.gif) repeat-x;
+footer {
+	/*height: 400px;*/
+	border-top: 5px solid #D8D8D8;
+	min-height: 500px;
+	padding: 50px 0 0 0;
+	background-color: #003448;
+/*	background: #003448 url(../img	/img09.gif) repeat-x left bottom;*/
 }
 
-html>body #footer {
-	height: auto;
-}
 
-#footer .wrap {
+
+footer .wrap {
+	background-color: #003448;
 	width: 60%;
 	margin: 0 auto;
 }
