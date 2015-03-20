@@ -168,6 +168,10 @@ section {
 	max-width: 800px;
 }
 
+#construcao {
+	display: block;
+	margin: 0 auto;
+}
 
 /* ======================= 
 		Conteudo 
@@ -250,7 +254,7 @@ footer {
 
 }
 
-footer .wrap {
+.wrap {
 	/*border: 1px solid red;	*/
 	width: 70%;
 	margin: 0 auto;
@@ -272,6 +276,11 @@ footer .wrap {
 	list-style: none;
 }
 
+.wrap p {
+	color: white;
+	margin: 0;
+
+}
 	.wrap a:link, .wrap a:active, .wrap a:visited  {
 		color: white;
 		text-decoration: none;
@@ -282,7 +291,7 @@ footer .wrap {
 	}
 
 
-	#fbox1, #fbox2 {
+	#fbox1, #fbox2, #fbox3 {
 		width: 20%;		
 		float: left;	
 	}
@@ -291,6 +300,13 @@ footer .wrap {
 		padding-left: 5%;
 	}
 	
+	#fbox3 {
+		padding-left: 5%;
+		width: 50%
+	}
+		#fbox3 span {
+			color: orange;		
+		}
 
 
 #legal {

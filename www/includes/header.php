@@ -30,9 +30,9 @@
 		<ul>
 			<li <?= $index ?> ><a href="index.php"> home</a></li>
 			<li <?= $cursos ?> ><a href="cursos.php">cursos</a></li>
-			<li <?= $pesquisa ;?> ><a href="construcao.html">pesquisa</a></li>
-			<li <?= $quem ;?> ><a href="construcao.html">quem faz?</a></li>
-			<li <?= $contato ;?> ><a href="construcao.html">contato</a></li>
+			<li <?= $pesquisa ;?> ><a href="construcao.php">pesquisa</a></li>
+			<li <?= $quem ;?> ><a href="construcao.php">quem faz?</a></li>
+			<li <?= $contato ;?> ><a href="construcao.php">contato</a></li>
 			
 		</ul>
 	</nav>
@@ -48,9 +48,9 @@
 			<ul>
 				<li><a href="http://df.ffclrp.usp.br/sat/" title="Serviço de Atendimento Técnico" target="_blank">Atendimento Técnico</a></li>
 				<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>					
-				<li><a href="construcao.html">Orientações Estágio</a></li>
-				<li><a href="construcao.html">FAQ / Procedimentos</a></li>
-				<li><a href="construcao.html">Material Institucional</a></li>
+				<li><a href="construcao.php">Orientações Estágio</a></li>
+				<li><a href="construcao.php">FAQ / Procedimentos</a></li>
+				<li><a href="construcao.php">Material Institucional</a></li>
 				<li><a href="http://sites.ffclrp.usp.br/cefim/" title="Página do Centro Estudantil da Física Médica" target="_blank">CEFIM</a></li>
 				<li><a href="http://correio.usp.br" target="_blank">Webmail</a></li>
 			</ul>
