@@ -71,7 +71,7 @@ body {
 =================================== */
 
 header {
-	max-width: 800px; /* para layout fluido: 1200px / 1200px = 1 = 100% */
+	max-width: 800px;
 	margin: 20px auto 0 auto;
 
 	
@@ -116,44 +116,69 @@ header {
   ========================= */
 
 	nav {
-/*		margin: 0 auto;*/
+		margin-top: 10px;
 		font-family: 'Play', sans-serif;
+		background: #00567A;
+		padding: 1px;
+		
 	}
 
-	nav ul {
+	#menu {
 		margin: 10px auto;
 		list-style: none;
 		text-align: center;
 	}
 
-		nav li {
+		#menu li {
 			display: inline-block;
+			position: relative;
+			margin-right: 17px;
+			padding: 5px;
 		}
 		
-		nav ul li:nth-child(1) a {
-      	margin-left: 0%; /* Margem à esquerda do 1º elemento da lista tem valor 0 */
-      }
-
-			nav a {
-				margin-left: 30px;
+			#menu li:hover {
+				background-color: orange;			
+			}
+		#menu a {
 				text-decoration: none;
 				font-size: 22px;
-				color: #000;
-				padding-bottom: 10px;
+				color: whitesmoke;
+				
 			}
-		
-      
-	nav a:hover,nav .active a {
-
-/*		background: url(../img/img02.gif) repeat-x left bottom;*/
-		/*border-bottom: 5px solid #0C3C88;*/
-		border-bottom: 5px solid orange;
-		
-	}
+			
+			#menu .active a {
+				/*border-bottom: 5px solid #0C3C88;*/
+				border-bottom: 5px solid orange;
+			}
 	
-	nav a:visited, nav a:link {
-		color: black;	
-	}
+			
+
+			/* ========================
+				MENU DROPDOWN
+				Afeta os elementos dentro de #menu ul			
+			==========================*/
+			
+			#menu ul {
+				background: #00567A ;
+				position: absolute;
+				left: -9999px;
+			}
+			
+				#menu ul li {
+					float: none;				
+				}
+				
+				#menu ul a{
+	   			white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+				}
+			
+				#menu li:hover ul {
+					left: 0px;
+					background-color: #00567A;		
+				}
+
+
+
 
 	
 /*=====================
@@ -164,7 +189,7 @@ header {
 
 
 section {
-	margin: 50px auto;
+	margin: 30px auto;
 	max-width: 800px;
 }
 

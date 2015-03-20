@@ -27,12 +27,18 @@
 	
 	<nav>
 	
-		<ul>
+		<ul id="menu">
 			<li <?= $index ?> ><a href="index.php"> home</a></li>
 			<li <?= $cursos ?> ><a href="cursos.php">cursos</a></li>
 			<li <?= $pesquisa ;?> ><a href="construcao.php">pesquisa</a></li>
 			<li <?= $quem ;?> ><a href="construcao.php">quem faz?</a></li>
-			<li <?= $contato ;?> ><a href="construcao.php">contato</a></li>
+			<li>
+				<a href="#">links úteis</a>
+				<ul>
+            	<li><a href="#">Atendimento Técnico</a></li>
+            	<li><a href="#">Portal Filô</a></li>
+        		</ul>			
+			</li>
 			
 		</ul>
 	</nav>
