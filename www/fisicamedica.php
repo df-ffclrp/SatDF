@@ -9,13 +9,11 @@ $cursos = 'class="active"';
 include("includes/header.php");
 ?>
 		<!-- start content -->
-		<div id="content">
-			<div class="post">
-					<h1 class="title">Bacharelado em Física Médica</h1>
+		<div class="conteudo">
+			
+					<h1>Bacharelado em Física Médica</h1>
 					
-					<h2 class="title">Descrição do Curso</h2>
-					
-					<div class="entry">
+					<h2>Descrição do Curso</h2>
 						
 						<p>Bacharelado em Física Médica é um curso de graduação da Universidade de São Paulo – USP, 
 						sediado na Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto – FFCLRP, Campus Ribeirão Preto. 
@@ -32,16 +30,18 @@ include("includes/header.php");
 						<p>Ao escolher a carreira de Física Médica (40 vagas/ano), o estudante do Ensino Médio deverá fazer o vestibular da FUVEST. 
 						No site <a href="http://www.fuvest.br">www.fuvest.br</a> se encontram datas e informes sobre as inscrições e provas do vestibular. O estudante pode solicitar 
 						isenção total da taxa de inscrição do vestibular, mas deve ficar atento aos prazos divulgados no site da FUVEST. </p>
+
+						<!--	imagem	-->
 						<div>
 							<img src="img/alunos_sala.jpg" alt="Imagem Alunos Sala de Aula"/>
 							<p class="legenda">Estudantes de Física Médica do 1º semestre assistindo a disciplina “Física – Modelos e Aplicações”.</p>
 						</div>
-					</div>
 					
 					
-					<h2 class="title">Professores</h2>
 					
-					<div class="entry">
+					<h2>Professores</h2>
+					
+					<div>
 					
 						<p>Os professores do curso atuam em diversas áreas de pesquisa ligadas à Física aplicada na Medicina, 
 						na Biologia ou outras áreas da saúde, propiciando aos estudantes vivenciarem problemas reais inerentes à área de formação.</p>
@@ -51,22 +51,22 @@ include("includes/header.php");
 						
 					</div>
 					
-					<h2 class="title">Áreas de Atuação</h2>
+					<h2>Áreas de Atuação</h2>
 					
-					<div class="entry">
+					<div>
 						<p>O Bacharel em Física Médica pode atuar em diferentes áreas relacionadas à Física Médica, Biomédica e demais áreas 
 						tradicionais da Física; em programas de Pós-Graduação de diferentes Universidades Brasileiras ou no Exterior, 
 						Hospitais e Clínicas médicas, empresas multinacionais que desenvolvem ou comercializam equipamentos médicos hospitalares.</p>
 					</div>
-							
+					<!--	imagem	-->
 					<div>
 						<img src="img/alunos_lab.jpg" alt="Imagem Alunos no Laboratório"/>
 						<p class="legenda">Estudantes do 6º semestre de Física Médica no Laboratório de Eletrônica e Instrumentação Biomédica.</p>
 					</div>
 					
-					<h2 class="title">Infraestrutura do curso</h2>
+					<h2>Infraestrutura do curso</h2>
 					
-					<div class="entry">
+					
 						<p>O <a href="http://df.ffclrp.usp.br/">Departamento de Física</a> sedia o Curso de Física Médica na FFCLRP e está equipado com 
 						laboratórios de física básica, física moderna, eletrônica, instrumentação biomédica e dosimetria, além de algumas 
 						disciplinas utilizarem equipamentos de Laboratórios de Pesquisa e do Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto. </p>
@@ -91,9 +91,13 @@ include("includes/header.php");
 						
 						</p>
 						
-											
-					</div>
-				</div>
-			</div>
-		<!-- end content -->
+		<!-- end content -->									
+		</div>
+	</section>
+	
+<?php
+	include("includes/footer.html")
+?>		
+			
+		
 
