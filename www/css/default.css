@@ -118,9 +118,9 @@ header {
 	nav {
 		margin-top: 10px;
 		font-family: 'Play', sans-serif;
-		background: #00567A;
+		font-weight: bold;
+		background: #00567A; /*Azul escuro*/
 		padding: 1px;
-		
 	}
 
 	#menu {
@@ -134,24 +134,23 @@ header {
 			position: relative;
 			margin-right: 17px;
 			padding: 5px;
+			
+			
 		}
 		
 			#menu li:hover {
 				background-color: orange;			
 			}
-		#menu a {
+			
+			#menu a {
 				text-decoration: none;
-				font-size: 22px;
+				font-size: 18px;
 				color: whitesmoke;
-				
 			}
 			
 			#menu .active a {
-				/*border-bottom: 5px solid #0C3C88;*/
-				border-bottom: 5px solid orange;
+				border-bottom: 3px solid orange;
 			}
-	
-			
 
 			/* ========================
 				MENU DROPDOWN
@@ -164,20 +163,17 @@ header {
 				left: -9999px;
 			}
 			
-				#menu ul li {
-					float: none;				
-				}
-				
-				#menu ul a{
+			#menu ul li {
+				float: left;			
+			}
+			
+			#menu ul a{
 	   			white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
 				}
-			
+							
 				#menu li:hover ul {
 					left: 0px;
-					background-color: #00567A;		
 				}
-
-
 
 
 	
