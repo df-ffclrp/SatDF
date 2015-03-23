@@ -92,25 +92,28 @@ header {
 			font-family: 'Play', sans-serif;
 			font-size: 38px;
 		}
-		#logo h1 a{
-			color: black;
-			/*	Laranjinha daora
-			color: #5789C1;
-			*/
-		}
-
-			#logo h2 {
+		#logo h2{
 				margin: 0 auto;
 				text-align: center;
 				font-size: 25px;
 /*				color: #A0A0A0;*/
-				color: #7999C4;
+				
 			}
-
+			
 			#logo a {
 				text-decoration: none;
 			}
-
+			
+			#logo h2 a{
+				color: #7999C4;	
+			}
+			
+			#logo h1 a{
+				color: black;
+				/*	Laranjinha daora
+				color: #5789C1;
+				*/
+			}
 /* =========================
 			 Menu Superior
   ========================= */
