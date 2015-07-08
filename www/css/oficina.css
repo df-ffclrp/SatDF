@@ -1,0 +1,179 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* Regras Gerais CSS */
+
+body {
+	margin: 50px 0 0 0;
+	padding: 0;
+	background: #FFFFFF url(../images/img01.gif) repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #3E3E3E;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p, ul, ol {
+	margin: 0 0 2em 0;
+	text-align: justify;
+	line-height: 26px;
+	font-size: 11px;
+}
+
+a:link {
+	color: #7BAA0F;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #003448;
+}
+
+a:visited {
+	color: #333333;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+img.right {
+	float: right;
+	margin-left: 15px;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+input, textarea, select {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+/* Final das regras gerais CSS */
+
+/* Header */
+
+#header {
+	width: 600px;
+	height: 120px;
+	margin: 0 auto 40px auto;
+	background: url(images/img03.gif) repeat-x left bottom;
+	
+}
+
+#logo {
+	padding-top:27px;
+}
+
+#logo h1 {
+	font-size: 38px;
+	color: #494949;
+}
+
+#logo h1 sup {
+	vertical-align: text-top;
+	font-size: 24px;
+}
+
+#logo h1 a {
+	color: #494949;
+}
+
+#logo h2 {
+	margin-top: -2px;
+	font-size: 13px;
+	color: #A0A0A0;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+
+/* Page */
+
+#page {
+	width: 850px;
+	font-size: 20px;
+	margin: 0 auto 0 auto;
+}
+
+
+/* container da página inicial do sistema.*/
+
+.conteudo {
+	margin: auto;
+	text-align: center;
+}
+
+/* Pagina com form de pedido */
+
+.titulo_pedido {
+	/*border: 2px solid blanchedalmond;*/
+	text-align: center;
+	border-bottom: 2px solid black;
+	margin-bottom: 5px;
+}
+h3.titulo_pedido {
+	font-size: 26px;
+	border: none;
+}
+
+#pedido {
+	width: 800px;
+	
+	margin: -40px 30% 0 30%;
+}
+
+fieldset {
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.btn_enviar {
+	margin-left: 50px;
+	border: 1px solid black;
+	font-size: 20px;
+}
+
+
+/* Mensagem personalizada de erro*/
+#erro {
+	color: red;
+	font-size: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+
+
+
+
+
+

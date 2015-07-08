@@ -1,0 +1,118 @@
+body {
+	padding: 0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 24pt
+}
+
+h2 {
+	font-size: 22pt;
+}
+
+h3 {
+	font-size: 20pt;
+}
+
+/* Header */
+
+#header img {
+	position: relative;
+}
+
+#timbre {
+	margin-left: 3cm;
+	margin-top: -2cm;
+	width: 28cm;
+}
+
+#timbre h1 {
+	font-size: 20pt;
+}
+
+
+#timbre h2 {
+	margin-top: -2px;
+	font-size: 12pt;
+	margin-right:15%;
+	border-bottom: 2px solid black;
+}
+
+/* botao imprimir */
+.print {
+	height: 2cm;	
+	width: 2cm;
+	float: right;
+	margin-top: -1.65cm;	
+	text-align: center;
+}
+
+
+/* Page */
+
+.cabecalho {
+	text-align: center;
+	margin-top: 0.3cm;
+}
+
+#a4 {
+	/*width padrão: 21cm;*/
+	width: 30cm;
+	min-height: 29.7cm;
+	padding: 0.3cm;
+}
+
+.box_dados {
+	border-bottom: 2px solid black;
+	padding-bottom: 0.4cm;
+	
+}
+
+.box_descricao {
+	text-align: justify;
+}
+
+/* ASSINATURAS */
+
+.container_assinaturas {
+	position: relative;
+}
+.assinaturas {
+
+/*	position: absolute; */
+	margin-top: 5cm;	
+	width: 30cm ;
+	bottom: -11cm;
+}
+
+.idf_solicitante {
+	border-top: 2px solid black;
+	float: left;
+	text-align: center;
+	width: 8cm;
+	text-align:center;
+	margin-left: 1cm;
+}
+
+.idf_responsavel {
+	border-top: 2px solid black;
+	float: right;
+	text-align: center;
+	width: 8cm;
+	text-align:center;
+	margin-right: 2cm;
+}
+
+/* IMPRESSAO */
+
+@media print {
+/* remove botao imprimir */
+.print {
+	display: none;
+}
