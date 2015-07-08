@@ -1,11 +1,10 @@
 <?php
 # configuracao de conexao com o banco de dados
-
-$dbaddress='localhost';
-$dbuser='oficina';
-$dbpass='xZA5UeRasaQv5yJ8';
-$dbname='sis_oficina';
-
+function conecta() {
+	$dbaddress='localhost';
+	$dbuser='root';
+	$dbpass='123pin';
+	$dbname='sis_oficina_dev';
 	# Prepara a conexao
 	$connect = mysql_connect($dbaddress, $dbuser, $dbpass);
  	mysql_set_charset('utf8', $connect);
@@ -18,6 +17,7 @@ $dbname='sis_oficina';
 	# Caso a conexão seja aprovada, então conecta o Banco de Dados.
 	$db = mysql_select_db($dbname) or die (mysql_error());
 	}
+}
 ?>
 
 

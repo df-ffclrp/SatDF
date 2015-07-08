@@ -1,0 +1,168 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+* {
+/*border: 1px solid red;*/
+margin:0;
+padding:0;
+}
+
+/*=========================
+Configurações Básicas
+======================*/
+
+
+body {
+	max-width: 80%;
+	padding: 0;
+	background: #FFFFFF url(../img/img01.gif) repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+/*	color: #333333;*/
+	color: #000;
+/*	border: 1px solid green;*/
+}
+
+.center {
+	margin: 0 auto;
+	
+}
+
+	h1, h2, h3 {
+		margin: 0;
+		font-weight: normal;
+		color: #3E3E3E;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 23px;
+	}
+	
+	p, ul, ol {
+		margin: 0;
+		text-align: justify;
+		line-height: 26px;
+		font-size: 20px;
+	}
+
+	a:link, a:visited  {
+		color: #0C3C88;
+	}
+	
+	a:hover, a:active {
+		text-decoration: none;
+		color: orange;
+	}
+	
+	
+	img {
+		border: none;
+	}
+
+/* ================================== 
+	Header
+=================================== */
+
+header {
+	/*border:1px solid red;*/
+	max-width: 70%;
+	margin: 20px auto 0 auto;
+
+	
+/*	background: url(../img/img03.gif) repeat-x left bottom; */
+}
+
+	header img {
+		margin: 0 auto;;
+		display: block;
+	}
+	
+	#logo {
+		width: 100%;
+	}
+
+		#logo h1 {
+			text-align: center;
+			font-family: 'Play', sans-serif;
+			font-size: 38px;
+		}
+		#logo h2{
+				margin: 0 auto;
+				text-align: center;
+				font-size: 25px;
+				color: #7999C4;
+/*				color: #A0A0A0;*/
+				
+			}
+			
+			#logo a {
+				text-decoration: none;
+			}
+			
+			#logo h1 a{
+				color: black;
+				/*	Laranjinha daora
+				color: #5789C1;
+				*/
+			}
+
+/* ======================= 
+		Conteudo 
+========================*/
+
+.conteudo {
+	/*border: 1px solid red;*/
+	max-width: 100%;
+	margin: 0 auto;
+	font-family: 'Play', sans-serif;
+	text-align: center;
+}
+	
+	#erro {
+		margin: 0 auto;
+		padding: 5px;
+		font-size: 25px;
+		background-color: red;
+		color: white;
+		text-align: center;
+		max-width: 60%;
+	}
+	.conteudo h1 {
+		font-weight: bold;
+		text-align: center;
+		background: url(../img/img03.gif) repeat-x left bottom;
+	}
+
+	form {
+		margin-top: 2%;	
+	}
+	.conteudo input[type=text] {
+		border: 1px solid #7999C4;
+		font-size: 20px;
+		max-width: 150px
+		}
+	
+	.conteudo select {
+		padding: 2px;
+		border: 1px solid #7999C4;
+		font-size: 20px;
+	}
+	
+	.conteudo input[type=submit] {
+		margin: 2% auto;
+		padding: 5px;
+		color: white;
+		font-size: 16px;
+		background-color: #0C3C88;
+		border: 1px solid white;
+		
+	}
+
+

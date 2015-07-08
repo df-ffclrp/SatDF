@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include ('includes/conexao.php');
 # inclui o cabecalho html padrao
 include ('includes/header.html');
+include ('includes/conexao.php');
 require ('includes/functions.php');
 
 # Se o botao enviar foi pressionado, 
@@ -16,8 +16,8 @@ if (isset ($_POST['enviar']) ) {
 	# Se o campo estiver vazio, mostra menasgem para o usuário
 	if (empty($num_usp)){
 		$erro="Campo 'Número USP' necessário";		
-	}
-
+	} 
+	
 	else {
 		
 			# Verificacao se o usuário está cadastrado no sistema	
@@ -27,13 +27,14 @@ if (isset ($_POST['enviar']) ) {
 			
 			$query = "SELECT * FROM funcionario WHERE fun_num_usp=$num_usp AND fun_ativo=1";
 			
+			conecta();
 			# Envia consulta ao banco
 			$result = mysql_query($query) or die (mysql_error());
 		
 			# verifica se retornou resultados
 			$linha = mysql_num_rows($result);
 				
-			# Compara resultado retirado da query
+			# Testa resultado retirado da query
 			
 			if ($linha){
 	
@@ -55,7 +56,9 @@ if (isset ($_POST['enviar']) ) {
 				
 				# debug
 				//header('location:works.php');
+				
 				header('location:processa_pedido.php');
+				
 				mysql_close();
 				exit();
 			}
@@ -65,40 +68,32 @@ if (isset ($_POST['enviar']) ) {
 				}	
 			}
 } 
-?>
-<!-- start page -->
-<div id="page">
-		<!-- start content -->
-		<?php	
-			
-			# mostra erros caso haja erros no processamento
-			if (isset($erro)){
-				echo '<p id="erro">'.$erro.'</p>';
-			}
-			
 		?>
-		<div class="conteudo">
-				<h1><img src="images/wrench.png"/> Solicita&ccedil;&otilde;es Oficinas</h1>
-				<br />
+	<div class="conteudo">
+				<h1><img src="img/wrench.png"/> Serviço de Atendimento Técnico</h1>
 				
 				<form action="oficina.php" method="post">
-					N&uacute;mero USP <input type="text" name="num_usp" size="20" maxlenght="10">
+				<?php	
+					# mostra mensagem de erro caso haja erros no processamento
+						if (isset($erro)){
+							echo '<p id="erro">'.$erro.'</p>';
+						}
+				?>
+					Número USP <input type="text" name="num_usp" size="20" maxlenght="10">
 					<br />
 					
-					Selecione a oficina 
+					Área de atendimento
 					<select name="oficina_destino">
-						<option value="1" selected>Oficina Mec&acirc;nica</option>
-						<option value="2">Oficina de Eletr&ocirc;nica</option>
+						<option value="1" selected>Oficina Mecânica</option>
+						<option value="2">Oficina de Eletrônica</option>
 					</select>
 
-					<br />
-					<br />
-
-					<input type="submit" name="enviar" value="Enviar Dados">
-				</form>
-		</div>
+			<br>
+			<input type="submit" name="enviar" value="Enviar Dados">
+		</form>
+	</div>
 		
-</div>
+
 <!-- end page -->
 </body>
 </html>
