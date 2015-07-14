@@ -28,7 +28,7 @@ body {
 
 .center {
 	margin: 0 auto;
-	
+
 }
 
 	h1, h2, h3 {
@@ -44,7 +44,7 @@ body {
 	h2 {
 		font-size: 23px;
 	}
-	
+
 	p, ul, ol {
 		margin: 0;
 		text-align: justify;
@@ -55,18 +55,18 @@ body {
 	a:link, a:visited  {
 		color: #0C3C88;
 	}
-	
+
 	a:hover, a:active {
 		text-decoration: none;
 		color: orange;
 	}
-	
-	
+
+
 	img {
 		border: none;
 	}
 
-/* ================================== 
+/* ==================================
 	Header
 =================================== */
 
@@ -75,7 +75,7 @@ header {
 	max-width: 70%;
 	margin: 20px auto 0 auto;
 
-	
+
 /*	background: url(../img/img03.gif) repeat-x left bottom; */
 }
 
@@ -83,7 +83,7 @@ header {
 		margin: 0 auto;;
 		display: block;
 	}
-	
+
 	#logo {
 		width: 100%;
 	}
@@ -99,13 +99,13 @@ header {
 				font-size: 25px;
 				color: #7999C4;
 /*				color: #A0A0A0;*/
-				
+
 			}
-			
+
 			#logo a {
 				text-decoration: none;
 			}
-			
+
 			#logo h1 a{
 				color: black;
 				/*	Laranjinha daora
@@ -113,8 +113,8 @@ header {
 				*/
 			}
 
-/* ======================= 
-		Conteudo 
+/* =======================
+		Conteudo
 ========================*/
 
 .conteudo {
@@ -124,7 +124,15 @@ header {
 	font-family: 'Play', sans-serif;
 	text-align: center;
 }
-	
+    .conteudo img {
+        float: left;
+    }
+
+    .titulo {
+        margin: 0 auto;
+        max-width: 35%;
+
+    }
 	#erro {
 		margin: 0 auto;
 		padding: 5px;
@@ -140,29 +148,56 @@ header {
 		background: url(../img/img03.gif) repeat-x left bottom;
 	}
 
-	form {
-		margin-top: 2%;	
+    .box_login {
+        margin: 2% auto;
+        padding: 10px;
+        text-align: center;
+        /*background-color: #AECBEF;*/
+        background-color: #37577F;
+        box-shadow: -5px 5px 2.5px #888888;
+        max-height: 300px;
+        max-width: 400px;
+
+    }
+
+    form {
+		margin: 0 auto;
 	}
-	.conteudo input[type=text] {
-		border: 1px solid #7999C4;
-		font-size: 20px;
-		max-width: 150px
+
+        .box_login p {
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            padding: 5px;
+        }
+
+    	.box_login input[type=text] {
+            padding: 2px;
+            text-align: center;
+            margin: 0 auto;
+            border: 1px solid #7999C4;
+            font-size: 18px;
+            width: 80%
 		}
-	
-	.conteudo select {
-		padding: 2px;
-		border: 1px solid #7999C4;
-		font-size: 20px;
-	}
-	
-	.conteudo input[type=submit] {
-		margin: 2% auto;
-		padding: 5px;
-		color: white;
-		font-size: 16px;
-		background-color: #0C3C88;
-		border: 1px solid white;
-		
-	}
+
+        .box_login select {
+            margin: 0 auto;
+            padding: 2px;
+            border: 1px solid #7999C4;
+            font-size: 18px;
+            width: 80%
+        }
+
+        .box_login input[type=submit] {
+            margin: 2% auto;
+            padding: 5px;
+            color: white;
+            font-size: 16px;
+            background-color: #0C3C88;
+            border: 1px solid white;
+
+        }
+
+
 
 
