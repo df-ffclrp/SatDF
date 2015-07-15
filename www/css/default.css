@@ -189,16 +189,77 @@ header {
             width: 80%
         }
 
-        .box_login input[type=submit] {
-            margin: 2% auto;
-            padding: 5px;
-            color: white;
-            font-size: 16px;
-            background-color: #0C3C88;
-            border: 1px solid white;
 
-        }
+  .botao {
+      margin: 2% auto;
+      padding: 5px;
+      color: white;
+      font-size: 16px;
+      background-color: #0C3C88;
+      border: 1px solid white;
 
+  }
 
+/* ==================================
+		Form pedido
+=================================== */
 
+#form_pedido {
+	padding: 15px 15px;
+	text-align: center;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+	background-color: #EDECEB;
+	max-width: 55%;
+	box-shadow: -5px 5px 2.5px #888888;
+}
 
+	#form_pedido h2 {
+		color: white;
+		font-weight: bolder;
+		background-color: #0C3C88;
+		text-align: center;
+		font-size: 28px;
+	}
+
+	#oficina_titulo {
+		font-weight: bold;
+		font-size: 23px;
+		margin-top: 15px;
+	}
+	
+		#form_pedido .label {
+			font-weight: bold;		
+		}
+	
+	.formulario {
+			padding-bottom: 15px;	
+	}
+	.formulario h3 {
+			padding: 5px;
+			font-weight: bold;
+			font-size: 23px;
+			background-color: #F58220;
+			color: white;		
+		
+		}
+		.formulario p {
+			text-align: center;
+			font-weight: bold;	
+		}
+		.formulario legend {
+			margin: 0 auto;max-width: 100%;		
+		}
+		
+		.formulario input[type=text]{
+			padding: 2px;
+			border: 1px solid black;
+			width: 100%;
+			top: -100px;
+		
+		}
+			.form_inputs {
+				margin: 0 auto;
+				border: 1px solid red;
+				max-width: 80%;
+			}

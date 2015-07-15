@@ -1,8 +1,36 @@
 <?php
 # Arquivo de funções da aplicação
 
-# Função para enviar email
+##############################################
+# configuracao de conexao com o banco de dados
+##############################################
 
+function conectaDB() {
+
+    # Adiciona os parâmetros da conexão
+    require('config.php');
+
+	# Prepara a conexao
+	$connect = mysqli_connect($dbaddress, $dbuser, $dbpass) or die ("Não foi possível conectar ao banco de dados");
+
+    # Configura as transações para UTF-8
+ 	mysqli_set_charset($connect, 'utf8');
+
+	# Caso a conexão seja reprovada, exibe na tela uma mensagem de erro
+	if (!$connect) {
+		echo "<h1>Falha na conexao com o Banco de Dados!</h1>";
+		mysqli_error($connect);
+ 	}
+	 else {
+	# Caso a conexão seja aprovada, então conecta o Banco de Dados.
+	$db = mysqli_select_db($connect,$dbname) or die ("Não foi possível selecionar o banco ." . mysqli_error($connect));
+	}
+    return $connect;
+}
+
+############################
+# Função para enviar email
+############################
 /*
 Função específica para enviar um email apara os responsáveis pelas oficinas
 Parâmetros:
@@ -96,25 +124,32 @@ function send_email($recipients,$id_os,$workshop,$url_os) {
 	//echo 'Notificação enviada com sucesso via email.';
 
 }
+#########################################
+# Função para debugar variáveis
+#########################################
 
-# Função para debugar variável de sessão
 # Parâmetros:
 # - Variável para debugar = $var
 # - Var Dump = v
 # - Print_r = p
+
 function debug_var($var,$varname, $debug_type='v') {
-	echo "Debugando variável: " . '<span style="color:red;">'.$varname . "</span>";
+	echo "Debugando: " . '<span style="color:red;">' . $varname . "</span>";
 	echo "<pre>";
+	
 	if($debug_type=='v') {
 		var_dump($var);
 	}
+	
 	if($debug_type=='p') {
 		print_r($var);
 	}
 	echo "</pre>";
 }
+################################################################
+# Função para preparar variáveis recebidas ou retiradas do POST
+################################################################
 
-# Prepara variáveis recebidas ou retiradas do POST
 function test_input($data) {
 	$data = trim($data);
    $data = addslashes($data);
@@ -122,17 +157,21 @@ function test_input($data) {
    return $data;
 }
 
+##############################################################
 # Limpa as slashes antes de mostrar ao usuário
+##############################################################
 function clean_output($data) {
 	$data = stripslashes($data);
 	return $data;
 }
 
+##############################################################
 # Verifica os técnicos de cada oficina e o docente responsável
 # Retorna dados de envio para email
+##############################################################
 
 function retrieve_staff($id_oficina) {
-	require('conexao.php');
+	
 	# ID da oficina está localizado no banco
 	# Atualmente:
 	# 1 - Oficina Mecânica
