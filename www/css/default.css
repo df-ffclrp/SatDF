@@ -133,7 +133,7 @@ header {
         max-width: 35%;
 
     }
-	#erro {
+	.erro {
 		margin: 0 auto;
 		padding: 5px;
 		font-size: 25px;
@@ -233,8 +233,14 @@ header {
 		}
 	
 	.formulario {
-			padding-bottom: 15px;	
+			padding-bottom: 15px;font-size: 15px;		
 	}
+		.form_inputs {
+				margin: 0 auto;
+				max-width: 80%;
+			}
+	
+	
 	.formulario h3 {
 			padding: 5px;
 			font-weight: bold;
@@ -244,22 +250,29 @@ header {
 		
 		}
 		.formulario p {
+			margin-top: 10px;
 			text-align: center;
 			font-weight: bold;	
 		}
-		.formulario legend {
-			margin: 0 auto;max-width: 100%;		
-		}
+		
 		
 		.formulario input[type=text]{
 			padding: 2px;
 			border: 1px solid black;
-			width: 100%;
-			top: -100px;
-		
+			max-width: 100%;
+					
 		}
-			.form_inputs {
-				margin: 0 auto;
-				border: 1px solid red;
-				max-width: 80%;
+			.formulario select {
+				border: 1px solid black;
+				max-width: 60%;
+				background-color: white;
 			}
+			
+			.formulario textarea {
+				border: 1px solid black;
+				width: 100%;
+				height: 250px;	
+			}
+			
+			
+			

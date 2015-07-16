@@ -171,32 +171,47 @@ function clean_output($data) {
 ##############################################################
 
 function retrieve_staff($id_oficina) {
+/* 
+	Recupera do banco os técnicos responsáveis e Docente
 	
-	# ID da oficina está localizado no banco
-	# Atualmente:
-	# 1 - Oficina Mecânica
-	# 2 - Oficina de Eletrônica
+	 retrieve staff retorna um array multidimensional contendo:
+	 $staff_and_rows['rows']
+	 $staff_and_rows['staff']
+	
+	 rows -> número de funcionários encontrados na consulta
+	 staff -> contem um array bidimensional no seguinte formato:
+	 INDICE -> Linha do banco
+	 staff[INDICE][COLUNA DO BANCO DE DADOS] == dado daquela coluna 
+	
+	 ID da oficina está localizado no banco
+	 Atualmente:
+	 1 - Oficina Mecânica
+	 2 - Oficina de Eletrônica
 
-	# Tipos de Usuários:
-	# 1 - Funcionário padrão
-	# 2 - Técnico responsável
-	# 3 - Docente responsável
+	 Tipos de Usuários:
+	 1 - Funcionário padrão
+	 2 - Técnico responsável
+	 3 - Docente responsável
+*/
 
 	# Transação padrão no banco de dados
+	
+	# Inicializa a conexão
+	$conexao = conectaDB();
 
 	# cria um array para armazenar os dados
 
-	$query = "SELECT fun_id, fun_nome, fun_email, fun_tipo FROM funcionario WHERE fun_tipo IN(2,3) AND fun_ativo=1 AND fun_tipo_oficina = $id_oficina ORDER BY fun_tipo DESC";
-	$result = mysql_query($query) or die ("Ocorreu um erro -> " . mysql_error());
+	$query = "SELECT fun_id, fun_nome, fun_email, fun_tipo FROM funcionario WHERE fun_tipo IN(2,3) AND fun_ativo=1 AND fun_tipo_oficina = '$id_oficina' ORDER BY fun_tipo DESC";
+	$result = mysqli_query( $conexao , $query ) or die ("Ocorreu um erro na consulta ao banco de dados -> " . mysqli_error($conexao));
 
 	# Verifica quantidade de linhas
-	$rows = mysql_num_rows($result);
+	$rows = mysqli_num_rows($result);
 
 	# Armazena num array associativo
 	$staff_and_rows['rows'] = $rows;
 
 	# Transforma o resultado do banco num array bidimensional
-	while( $dados = mysql_fetch_assoc($result) ){
+	while( $dados = mysqli_fetch_assoc($result) ){
 		foreach ($dados as $chave => $valor){
 			$array_dados[$rows][$chave] = $valor;
 		}
@@ -205,8 +220,7 @@ function retrieve_staff($id_oficina) {
 
 	# Retorna um array com o número de linhas e com os dados do banco
 	$staff_and_rows['staff'] = $array_dados;
+	
 	return $staff_and_rows;
-
-
 }
 ?>

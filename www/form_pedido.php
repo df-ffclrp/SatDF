@@ -7,15 +7,15 @@ include('includes/header.html');
 # Funções básicas do programa
 require_once ('includes/functions.php');
 
-# inicializa variável de controle de erros
-$_SESSION['erro'] = 0;
-
-include ('stubs/session.php');
+#include ('stubs/session.php');
 #############################################################
 
 # Se tem Session, mostra o formulário para o usuário
 if(isset($_SESSION['num_usp'])) {
 	//debug_var($_SESSION,"Variável de Sessão");
+	
+	# script começa sem erros
+	$erro = 0;
 	
 	if(isset($_SESSION['erro'])) {
 		$erro = $_SESSION['erro'];
@@ -43,7 +43,7 @@ if(isset($_SESSION['num_usp'])) {
 		<br />
 		
 		<?php
-				if($erro==1) { echo '<h3 id="erro"> Preencher todos os campos!</h3>';} 
+				if($erro==1) { echo '<h3 class="erro"> Preencher todos os campos!</h3>';} 
 		 ?>
 		 
 	<form action="processa_pedido.php" method="post">
@@ -54,7 +54,7 @@ if(isset($_SESSION['num_usp'])) {
 				
 				<div class="form_inputs">
 		    		<p>Nome do Projeto</p>
-		    		<input type="text" name="nome_projeto" size="50" <?php if($erro) echo " value=".$_SESSION['nome_projeto']; ?>	>
+		    		<input type="text" name="nome_projeto" size="50" required title="Campo de preenchimento obrigatório" <?php if($erro) echo " value=".$_SESSION['nome_projeto']; ?>	>
 					
 		    		<p>Finalidade</p>
 		    		<?php 
@@ -74,7 +74,7 @@ if(isset($_SESSION['num_usp'])) {
 		    		
 							
 		    		<p>Descrição do pedido</p>
-					    	<textarea name="desc_pedido" cols="85" rows="6"><?php if($erro==1){echo $_SESSION['desc_pedido'];}?></textarea>
+					    	<textarea name="desc_pedido" required><?php if($erro==1){echo $_SESSION['desc_pedido'];}?></textarea>
 				</div>
 			</div>
 	<!-- FIM - Detalhes Pedido -->
@@ -97,9 +97,7 @@ if(isset($_SESSION['num_usp'])) {
 		    	</select>
 		    		
 		    	  	<p>Descrição do Material</p>
-		    	<textarea name="desc_material" cols="85" rows="6">
-		    		<?php if($erro==1){echo $_SESSION['desc_material'];} ?>
-		    	</textarea>
+		    	<textarea name="desc_material" required><?php if($erro==1){echo $_SESSION['desc_material'];} ?></textarea>
 		    	</div>
 		</div>
     	
@@ -111,8 +109,17 @@ if(isset($_SESSION['num_usp'])) {
 </body>
 </html>
 <?php	
-}	
 
-else 
-	echo "bugou o script do form";
+		# Zera variável de erros, se o erro foi ativado
+		if($erro==1)
+			$_SESSION['erro'] = 0;
+			$erro = 0;
+		}	
+############
+else {
+		# Se a página foi acessada sem nada preenchido retorna para a página inicial
+		session_destroy();
+		//header('location:oficina.php');
+		header('location:stubs/redirect.php');
+	}
 ?>

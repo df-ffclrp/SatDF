@@ -3,10 +3,11 @@ session_start();
 
 # Cabecalho da página de impressão
 require_once('includes/header_imprimir.html');
+require_once('stubs/session_print.php');
 
 if(isset($_SESSION['num_usp']) && isset($_SESSION['imprimir'])) {
 	require_once('includes/functions.php');
-	require_once('includes/conexao.php');	
+
 	
 	# Envio de email para:
 	# - Responsáveis pela oficina (Técnicos)
@@ -34,8 +35,10 @@ if(isset($_SESSION['num_usp']) && isset($_SESSION['imprimir'])) {
 	$oficina_destino = $_SESSION['oficina_destino'];
 	$url_sistema = "http://df.ffclrp.usp.br/sat/"; // Cria link enviado no email
 	
+	#################################################################
 	# função localizada no arquivo functions.php
-	send_email($staff_and_rows,$os_id,$oficina_destino,$url_sistema);		
+	//send_email($staff_and_rows,$os_id,$oficina_destino,$url_sistema);		
+	#################################################################
 
 ### Tratamento das mensagens aos usuários ###
 	
@@ -178,7 +181,8 @@ if(isset($_SESSION['num_usp']) && isset($_SESSION['imprimir'])) {
 } else {
 	# Se o script foi invocado sem a variável de sessão imprimir, volta pra página inicial
 	session_destroy();
-	header('location:oficina.php');
+	echo "imprimir não setado";
+//	header('location:oficina.php');
 }
 
 ?>

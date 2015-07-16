@@ -14,7 +14,7 @@ if (isset ($_POST['enviar']) ) {
 
 	# Se o campo estiver vazio, mostra menasgem para o usuário
 	if (empty($num_usp)){
-		$erro="Campo 'Número USP' necessário";
+		$erro='Campo "Número USP" necessário';
 	}
 
 	else {
@@ -30,7 +30,7 @@ if (isset ($_POST['enviar']) ) {
 			$conexao = conectaDB();
 
         	# Envia consulta ao banco
-			$result = mysqli_query($conexao , $query) or die ('deu pau na query');
+			$result = mysqli_query($conexao , $query) or die ('Não foi possível realizar a consulta no banco de dados' . mysqli_error( $conexao ));
 			
 			# Verifica quantas linhas foram encontradas na query
          $linha = mysqli_num_rows( $result );
@@ -58,7 +58,7 @@ if (isset ($_POST['enviar']) ) {
 				# Finaliza a conexão e manda pra próxima página:
 
 				mysqli_close($conexao);
-				header('location:processa_pedido.php');
+				header('location:form_pedido.php');
 				exit();
 				
 				}
@@ -78,7 +78,7 @@ if (isset ($_POST['enviar']) ) {
       <?php
 			# mostra mensagem de erro caso haja erros no processamento
 			if (isset($erro)){
-				echo '<p id="erro">'.$erro.'</p>';
+				echo '<p class="erro">'.$erro.'</p>';
 			}
 
 		?>
@@ -86,7 +86,7 @@ if (isset ($_POST['enviar']) ) {
 				<form action="oficina.php" method="post">
 
 				<p>Número USP</p> 
-             	<input type="text" name="num_usp" size="20" maxlenght="10" required="required" pattern="[0-9]+$" title="Insira somente números">
+             	<input type="text" name="num_usp" size="20" maxlenght="10" required pattern="[0-9]+$" title="Insira somente números">
 
 				<p>Área de atendimento</p>
 					<select name="oficina_destino">
