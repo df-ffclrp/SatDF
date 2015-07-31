@@ -1,3 +1,7 @@
+/*======================
+Configurações iniciais
+======================*/
+
 body {
 	padding: 0;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -6,6 +10,10 @@ body {
 
 h1, h2, h3 {
 	margin: 0;
+}
+
+p {
+	margin: 2px;
 }
 
 h1 {
@@ -18,101 +26,127 @@ h2 {
 
 h3 {
 	font-size: 20pt;
+	text-align: center;
+	border-bottom: 0.7mm solid black;
+	margin-bottom: 0.5cm;
 }
 
-/* Header */
+/* =================
+		Header
+==================== */
+
+#header {
+/*	border: 1px solid red;*/
+	min-height: 2.5cm;
+}
 
 #header img {
-	position: relative;
+	float: left;
 }
 
-#timbre {
-	margin-left: 3cm;
-	margin-top: -2cm;
-	width: 28cm;
-}
+	#timbre {
+		margin-top: 1.5%;
+/*		border: 1px solid green;*/
+/*		width: 91.180646811%;*/
+		width: 90.180646811%;
+		float:right;
+		
+	}
 
-#timbre h1 {
-	font-size: 20pt;
-}
-
-
-#timbre h2 {
-	margin-top: -2px;
-	font-size: 12pt;
-	margin-right:15%;
-	border-bottom: 2px solid black;
-}
-
-/* botao imprimir */
-.print {
-	height: 2cm;	
-	width: 2cm;
-	float: right;
-	margin-top: -1.65cm;	
-	text-align: center;
-}
+		#timbre h1 {
+			font-size: 20pt;
+		}
 
 
-/* Page */
+		#timbre h2 {
+			margin-top: -2px;
+			font-size: 12pt;
+			border-bottom: 2px solid black;
+		}
 
-.cabecalho {
-	text-align: center;
-	margin-top: 0.3cm;
-}
+
+
+	/* botao imprimir */
+	.print {
+		padding: 5px;
+		border: 1px solid black;
+		height: 2cm;	
+		width: 2cm;
+		float: right;
+		margin-top: -2.5cm;	
+		text-align: center;
+		background-color: #fff;
+	}
+
 
 #a4 {
+/*	border: 1px solid blue;*/
 	/*width padrão: 21cm;*/
 	width: 30cm;
 	min-height: 29.7cm;
 	padding: 0.3cm;
 }
 
+	#titulo {
+		text-align: center;
+		margin-bottom: 0.5cm;
+	}
+.label {
+	font-weight: bold;
+}
+
 .box_dados {
-	border-bottom: 2px solid black;
 	padding-bottom: 0.4cm;
-	
 }
 
 .box_descricao {
+	margin-top: 0.3cm;
 	text-align: justify;
 }
 
-/* ASSINATURAS */
+
+/* ====================
+		ASSINATURAS
+======================= */
 
 .container_assinaturas {
 	position: relative;
 }
-.assinaturas {
 
-/*	position: absolute; */
-	margin-top: 5cm;	
-	width: 30cm ;
-	bottom: -11cm;
-}
 
-.idf_solicitante {
-	border-top: 2px solid black;
-	float: left;
-	text-align: center;
-	width: 8cm;
-	text-align:center;
-	margin-left: 1cm;
-}
+	.assinaturas {
+	/*	position: absolute; */
+		margin-top: 5cm;	
+		width: 30cm ;
+		bottom: -11cm;
+	}
 
-.idf_responsavel {
-	border-top: 2px solid black;
-	float: right;
-	text-align: center;
-	width: 8cm;
-	text-align:center;
-	margin-right: 2cm;
-}
+		.idf_solicitante {
+			border-top: 2px solid black;
+			float: left;
+			text-align: center;
+			width: 8cm;
+			text-align:center;
+			margin-left: 1cm;
+		}
+		
+		.idf_responsavel {
+			border-top: 2px solid black;
+			float: right;
+			text-align: center;
+			width: 8cm;
+			text-align:center;
+			margin-right: 2cm;
+		}
 
-/* IMPRESSAO */
+
+
+
+/* CONFIGURAÇÕES IMPRESSAO */
 
 @media print {
 /* remove botao imprimir */
-.print {
-	display: none;
+	.print {
+		display: none;
+	}
 }
