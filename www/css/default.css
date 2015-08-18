@@ -1,9 +1,3 @@
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-*/
-
 * {
 /*border: 1px solid red;*/
 margin:0;
@@ -28,7 +22,6 @@ body {
 
 .center {
 	margin: 0 auto;
-	
 }
 
 	h1, h2, h3 {
@@ -66,9 +59,9 @@ body {
 		border: none;
 	}
 
-/* ================================== 
-	Header
-=================================== */
+/* ============== 
+		Header
+================= */
 
 header {
 	max-width: 800px;
@@ -137,12 +130,10 @@ header {
 			position: relative;
 			margin-right: 17px;
 			padding: 5px;
-			
-			
 		}
 		
 			#menu li:hover {
-				background-color: orange;			
+				background-color: orange;
 			}
 			
 			#menu a {
@@ -151,7 +142,7 @@ header {
 				color: whitesmoke;
 			}
 			
-			#menu .active a {
+			#menu .active {
 				border-bottom: 3px solid orange;
 			}
 
@@ -163,7 +154,10 @@ header {
 			#menu ul {
 				background: #00567A ;
 				position: absolute;
+				top: 35px;
+/*				left: 0px;*/
 				left: -9999px;
+				
 			}
 			
 			#menu ul li {
@@ -171,12 +165,14 @@ header {
 			}
 			
 			#menu ul a{
+					border: 0;
 	   			white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
 				}
 							
 				#menu li:hover ul {
 					left: 0px;
 				}
+
 
 
 	
@@ -204,7 +200,6 @@ section {
 .conteudo {
 	max-width: 100%;
 	padding: 2%;
-/*	padding-right: 1%;*/
 }
 
 	.conteudo h1 {
@@ -221,47 +216,6 @@ section {
 		margin-bottom: 3px;
 		border-bottom: 1px solid orange;
 	}
-
-
-/* ====================== 
-		Sidebar
-========================= */
-
-#sidebar {
-	display: none;
-	font-family: 'Play', sans-serif;
-	font-weight: bold;
-	float: left;
-	margin-left: 20px;
-	width: 16,666666667%; /*Layout fluido: largura inicial: 200px / 1200px =~ 16%*/
-}
-
-#sidebar h2 {
-	margin-bottom: 10px;
-	
-/*	background: url(../img/img03.gif) repeat-x left bottom;*/
-	font-size: 16px;
-	border-bottom: 5px solid #0C3C88;
-}
-	#sidebar ul {
-		margin: 0;
-		padding: 0;
-	}
-
-		#sidebar li {
-			color: #0C3C88;
-		}
-			#sidebar a:link {
-				text-decoration: none;
-			}
-			
-			#sidebar a:visited {
-				color: #0C3C88;	
-			}
-			#sidebar a:hover {
-				text-decoration: underline;
-				color: orangered;		
-			}
 			
 /* ===============
 
