@@ -47,9 +47,9 @@ function send_email($recipients,$id_os,$workshop,$url_os) {
 
 	# Trata oficina de destino
 	if($workshop == 1) {
-		$show_workshop = "Oficina Mecânica";
+		$workshop_name = "Oficina Mecânica";
 	} else {
-		$show_workshop = "Oficina de Eletrônica";
+		$workshop_name = "Oficina de Eletrônica";
 	}
 
 	$mail = new PHPMailer;
@@ -93,12 +93,13 @@ function send_email($recipients,$id_os,$workshop,$url_os) {
 
 	$mail->Subject = 'Nova ordem de serviço - Nr.'. $id_os;
 
-	$mail->Body    = '<html xmlns="http://www.w3.org/1999/xhtml">
+	$mail->Body    = '<!DOCTYPE HTML>
+							<html lang="pt-br">
 							<head>
-							<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+								<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 							</head>
 							<body>
-								Nova solicita&ccedil;&atilde;o aberta na '. $show_workshop . "
+								Nova solicita&ccedil;&atilde;o aberta na '. $workshop_name . "
 								<br />
 								<br />
 								Para ver a solicita&ccedil;&atilde;o acesse o link:
@@ -133,7 +134,7 @@ function send_email($recipients,$id_os,$workshop,$url_os) {
 # - Var Dump = v
 # - Print_r = p
 
-function debug_var($var,$varname, $debug_type='v') {
+function debug_var($var,$varname='var', $debug_type='v') {
 	echo "Debugando: " . '<span style="color:red;">' . $varname . "</span>";
 	echo "<pre>";
 	

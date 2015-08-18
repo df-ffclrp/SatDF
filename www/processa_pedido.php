@@ -80,8 +80,8 @@ if(isset($_POST['envia_pedido'])) {
 			$_SESSION['imprimir'] = 1;
 			$_SESSION['last_sol_id'] = mysqli_insert_id($conexao);
 		
-			//header('location:imprime_pedido.php');
-			debug_var($_SESSION, 'Sessão', 'p');
+			header('location:imprime_pedido.php');
+			//debug_var($_SESSION, 'Sessão', 'p');
 			mysqli_close($conexao);
 			exit();
 		}

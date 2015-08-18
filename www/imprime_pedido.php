@@ -3,11 +3,12 @@ session_start();
 
 # Cabecalho da página de impressão
 require_once('includes/header_imprimir.html');
-require_once('stubs/session_print.php');
+
+# Stub
+//require_once('stubs/session_print.php');
 
 if(isset($_SESSION['num_usp']) && isset($_SESSION['imprimir'])) {
 	require_once('includes/functions.php');
-
 	
 	# Envio de email para:
 	# - Responsáveis pela oficina (Técnicos)
@@ -36,8 +37,11 @@ if(isset($_SESSION['num_usp']) && isset($_SESSION['imprimir'])) {
 	$url_sistema = "http://df.ffclrp.usp.br/sat/"; // Cria link enviado no email
 	
 	#################################################################
-	# função localizada no arquivo functions.php
-	//send_email($staff_and_rows,$os_id,$oficina_destino,$url_sistema);		
+	# 								ENVIA EMAIL
+	
+	
+	send_email($staff_and_rows,$os_id,$oficina_destino,$url_sistema);	
+		
 	#################################################################
 
 ### Tratamento das mensagens aos usuários ###
@@ -101,88 +105,80 @@ if(isset($_SESSION['num_usp']) && isset($_SESSION['imprimir'])) {
 ?>
 
 		<!-- Cabeçalho -->
-		<div class="cabecalho">
-				<h2>Ordem de Servico - <?= $oficina_titulo ?> </h2>
-		</div>
 		
-		<br />
-
-		<br />	
-
+		<h2 id="titulo">Ordem de Serviço - <?= $oficina_titulo ?> </h2>
+		
 		<!-- Solicitante -->
 		<div class="box_dados">
 			<h3>Dados do solicitante</h3>
-			<strong>Nome: </strong> <?= $_SESSION['nome']; ?>  <br />
-			<strong>Numero USP: </strong> <?= $_SESSION['num_usp']; ?> <br />
-			<strong>Ramal: </strong> <?= $_SESSION['ramal']; ?> <br />
-			<strong>Email: </strong> <?= $_SESSION['email']; ?>  <br />
+			
+			<p><span class="label">Nome: </span> <?= $_SESSION['nome']; ?> </p>
+			<p><span class="label">Numero USP: </span> <?= $_SESSION['num_usp']; ?> </p>
+			<p><span class="label">Ramal: </span> <?= $_SESSION['ramal']; ?> </p> 
+			<span class="label">Email: </span> <?= $_SESSION['email']; ?>  <br />
 			
 		</div>
-		<br />
 		
 		<!-- Pedido -->				
 		<div class="box_dados">
 			<h3>Detalhes do Pedido</h3>
-	    	<strong>Número do Pedido: </strong> <?= $_SESSION['last_sol_id']; ?> <br />
-			<strong>Data de Abertura: </strong> <?= $_SESSION['data_abertura']; ?> <br />		
-			<strong>Nome do Projeto:</strong>  <?= $_SESSION['nome_projeto']; ?> <br />
-			<strong>Finalidade: </strong> <?= $finalidade; ?> 
-						
-				<br />
-				<br />
-				
-				<strong>Descrição do Pedido:</strong><br />
+	    	<p><span class="label">Número do Pedido: </span> <?= $_SESSION['last_sol_id']; ?> </p> 
+			<p><span class="label">Data de Abertura: </span> <?= $_SESSION['data_abertura']; ?> 	</p>
+			<p><span class="label">Nome do Projeto:</span>  <?= $_SESSION['nome_projeto']; ?> </p>
+			<p><span class="label">Finalidade: </span> <?= $finalidade; ?> </p>
+			
+			<p><span class="label">Descrição do Pedido:</span></p>
 
 				<div class="box_descricao">
 	 				<?= $_SESSION['desc_pedido']?>
 				</div>
 		</div>
 		
-		<br />
 		
 		<div class="box_dados">
-			<h3><strong>Dados do Material:</strong></h3>
+			<h3>Dados do Material:</h3>
 
-			<strong>Fornecimento: </strong> <?= $fornecimento_material ?>
-				
-			<br />
-			<br />
-		
-			<strong>Descri&ccedil;&atilde;o do Material:</strong><br />
+			<p><span class="label" >Fornecimento: </span> <?= $fornecimento_material ?> </p>
+			<p><span class="label">Descrição do Material:</span></p>
 			
 			<div class="box_descricao">
 	 			<?= $_SESSION['desc_material']; ?>
 			</div>
 		</div>
-<div class="container_assinaturas">
-		<div class="assinaturas">
+		
+		<!-- Assinaturas -->		
+		<div class="container_assinaturas">
+			<div class="assinaturas">
 					
-					<div class="idf_solicitante">
+				<div class="idf_solicitante">
 					<?= $_SESSION['nome']?><br />
-					<strong>	Solicitante</strong>
-					</div>
+				<span>	Solicitante</span>
+				</div>
 				
-					<div class="idf_responsavel">	
+				<div class="idf_responsavel">	
 					<?php
 						foreach($resp as $chave=>$valor){
 							echo $valor."<br />";						
 						}
 					?>
-					<strong> Responsáveis </strong>
-					</div>
-</div>
-</div>
+					<span> Responsáveis </span>
+				</div>
+			</div>
+		</div>
 </body>
 </html>
+
 <?php
-# Finaliza IF
-	# Encerra sessao
+	# Finaliza IF e Encerra sessão
 	session_destroy();
+
 } else {
+	
 	# Se o script foi invocado sem a variável de sessão imprimir, volta pra página inicial
 	session_destroy();
-	echo "imprimir não setado";
-//	header('location:oficina.php');
+	
+	//echo "imprimir não setado";
+	header('location:oficina.php');
 }
 
 ?>
