@@ -41,7 +41,7 @@
 				</ul>
 			</li>
 			
-			<li <?= $pesquisa ;?> ><a href="construcao.php">pesquisa</a></li>
+			<li <?= $pesquisa ;?> ><a href="pesquisa.php">pesquisa</a></li>
 			<!--<li <?= $quem ;?> ><a href="construcao.php">quem faz?</a></li>-->
 			
 			<li>

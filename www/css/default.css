@@ -184,8 +184,10 @@ header {
 
 
 section {
+/*	border: 1px solid red;*/
 	margin: 30px auto;
 	max-width: 800px;
+	min-height: 300px;
 }
 
 #construcao {
