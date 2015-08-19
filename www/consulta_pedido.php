@@ -4,36 +4,40 @@
 
 if(isset($_GET['id_os'])) {
 
-	require_once('includes/conexao.php');
 	require_once('includes/functions.php');	
 	
 	# Reduz variáveis	
 	$id_os = $_GET['id_os'];
 		
 	# Prepara select do banco
-	$id_os = test_input($id_os);			
+	$id_os = test_input($id_os);		
 		
-	$query = "SELECT * FROM funcionario, solicitacao WHERE sol_id=$id_os AND fun_id_solicitante = fun_id AND sol_status<>0";
+	$query = "SELECT * FROM funcionario, solicitacao WHERE sol_id='$id_os' AND fun_id_solicitante = fun_id AND sol_status<>0";
 			
+	# Conecta ao banco
+	$conexao = conectaDB();
+	
 	# Envia consulta ao banco
-	$result = mysql_query($query) or die (mysql_error());
+	$result = mysqli_query($conexao, $query) or die ("Deu pau ->" . mysqli_error($conexao));
 	
 	# verifica se retornou resultados
-	$linha = mysql_num_rows($result);
+	$linha = mysqli_num_rows($result);
+	
+	
 				
 	# Compara resultado retirado da query
 			
 	if ($linha){
 	
 			# Retira dados do array de resposta
-			$array_result =	mysql_fetch_assoc($result);
+			$array_result =	mysqli_fetch_assoc($result);
 			
-			//debug_var($array_result,'v');
+			//debug_var($array_result,'Array Result','p');
 			
 			# Transforma array em variáveis simples
 			extract($array_result);
 			
-			mysql_close();
+			mysqli_close($conexao);
 	
 				
 ### Tratamento das mensagens aos usuários ###
@@ -42,68 +46,65 @@ if(isset($_GET['id_os'])) {
 	# 1 = Oficina Mecânica
 	# 2 = Oficina de Eletrônica	
 	
-	if($sol_oficina_destino==1) {
-		$oficina_titulo = "Oficina Mecânica";
-	} else {
-		$oficina_titulo = "Oficina de Eletrônica";
-	}	
-
-	# Responsáveis pela Oficina
-	$staff_and_rows = retrieve_staff($sol_oficina_destino);	
+		if($sol_oficina_destino==1) {
+			$oficina_titulo = "Oficina Mecânica";
+		} else {
+			$oficina_titulo = "Oficina de Eletrônica";
+		}	
 	
-	# Quantidade de registros
-	$rows = $staff_and_rows['rows'];
-	
-	# Retira array contendo os funcionários
-	$staff = $staff_and_rows['staff'];
-	
-	# Varre o array bidimensional criando um array com os nomes de responsáveis
-	for($i=1; $i<=$rows; $i++) {
-		$resp[$i] = $staff[$i]['fun_nome'];
-	}
+		# Responsáveis pela Oficina
+		$staff_and_rows = retrieve_staff($sol_oficina_destino);	
 		
-	# Finalidade
-	# 1 = Projetos Didáticos; 
- 	# 2 = Projetos de Pesquisa; 
-	# 3 = Projetos de Laboratório; 
-	# 4 = Manutenção
-	
-	# Inicializando variável
-	$finalidade = 0;
-	switch($sol_finalidade) {
-		case 1:
-			$finalidade = "Projetos Didáticos";
-			break;
+		# Quantidade de registros
+		$rows = $staff_and_rows['rows'];
+		
+		# Retira array contendo os funcionários
+		$staff = $staff_and_rows['staff'];
+		
+		# Varre o array bidimensional criando um array com os nomes de responsáveis
+		for($i=1; $i<=$rows; $i++) {
+			$resp[$i] = $staff[$i]['fun_nome'];
+		}
 			
-		case 2:
-			$finalidade = "Projetos de Pesquisa";
-			break;
+		# Finalidade
+		# 1 = Projetos Didáticos; 
+	 	# 2 = Projetos de Pesquisa; 
+		# 3 = Projetos de Laboratório; 
+		# 4 = Manutenção
 		
-		case 3:
-			$finalidade = "Projetos de Laboratório";
-			break;
+		# Inicializando variável
+		$finalidade = 0;
+		switch($sol_finalidade) {
+			case 1:
+				$finalidade = "Projetos Didáticos";
+				break;
+				
+			case 2:
+				$finalidade = "Projetos de Pesquisa";
+				break;
+			
+			case 3:
+				$finalidade = "Projetos de Laboratório";
+				break;
+			
+			case 4:
+				$finalidade = "Manutenção";
+				break;
+		}
 		
-		case 4:
-			$finalidade = "Manutenção";
-			break;
-	}
-	
-	# Fornecimento do Material
-	
-	if($sol_fornecimento_material==1) {
-		$fornecimento_material = "Fornecido pelo Departamento";
-	} else {
-		$fornecimento_material = "Fornecido pelo Solicitante";
-	}
+		# Fornecimento do Material
+		
+		if($sol_fornecimento_material==1) {
+			$fornecimento_material = "Fornecido pelo Departamento";
+		} else {
+			$fornecimento_material = "Fornecido pelo Solicitante";
+		}
 
 ?>
 
 		<!-- Cabeçalho -->
-		<div class="cabecalho">
-				<h2>Ordem de Servico - <?= $oficina_titulo ?> </h2>
-		</div>
 		
-		<br />	
+		<h2 id="titulo">Ordem de Servico - <?= $oficina_titulo ?> </h2>
 
 		<!-- Solicitante -->
 		<div class="box_dados">
@@ -174,14 +175,18 @@ if(isset($_GET['id_os'])) {
 </html>
 <?php
 	} #finaliza if($linha)
+		else {
+			echo "<br /> <br /><h3><center>Solicitação não encontrada</center></h3>";		
+			echo "</body>";
+			echo "</html>";
+		
+			exit();
+	}	
 # Finaliza IF
 } 
 	else {
-		echo "<br /> <br /><h3><center>Solicitação não encontrada</center></h3>";		
-		echo "</body>";
-		echo "</html>";
-		
-		exit();
-	}	
+		//echo "Nada Preenchido";
+		header('location:oficina.php');
+}	
 
 ?>
