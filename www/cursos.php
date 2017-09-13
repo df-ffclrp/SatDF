@@ -8,28 +8,22 @@ $cursos = 'class="active"';
 # Inclui cabeçalho
 include_once("includes/header.php");
 ?>
-	
-	<!-- start content -->
+<section>
 	<div class="conteudo">
-		
 		<h1>Cursos Oferecidos</h1>
 			
-				<h2>Graduação</h2>
-					<ul>
-						<li><a href="fisicamedica.php">Física Médica - Bacharelado em Física Médica</a></li>
-					</ul>				
-				
-				<h2>Pós-Graduação</h2>
-					<ul>
-						<li><a href="http://www.ffclrp.usp.br/posgraduacoes/fisica/mestradoemfisicaaplicadaamedicinaebiologia.php" target="_blank">Mestrado em Física Aplicada à Medicina e Biologia</a></li>
-						<li><a href="http://www.ffclrp.usp.br/posgraduacoes/fisica/doutoradoemfisicaaplicadaamedicinaebiologia.php" target="_blank">Doutorado em Física Aplicada à Medicina e Biologia</a></li>
-					</ul>	
+			<h2>Graduação</h2>
+				<ul>
+					<li><a href="fisicamedica.php">Física Médica - Bacharelado em Física Médica</a></li>
+				</ul>				
 			
-		
+			<h2>Pós-Graduação</h2>
+				<ul>
+					<li><a href="http://sites.usp.br/famb" target="_blank">Mestrado em Física Aplicada à Medicina e Biologia</a></li>
+					<li><a href="http://sites.usp.br/famb" target="_blank">Doutorado em Física Aplicada à Medicina e Biologia</a></li>
+				</ul>	
 	</div>
-	
-	<!-- end content -->
-	</section>
+</section>
 
 <?php
 include("includes/footer.html")

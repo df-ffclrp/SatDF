@@ -31,25 +31,24 @@
 			<li <?= $cursos ?> ><a href="cursos.php">cursos</a>
 				<ul>
 					<li><a href="fisicamedica.php" title="Bacharelado em Física Médica" >Graduação - Física Médica</a></li>
-					<li><a href="http://www.ffclrp.usp.br/posgraduacoes/fisica/mestradoemfisicaaplicadaamedicinaebiologia.php" 
+					<li><a href="http://sites.usp.br/famb" 
 					title="Mestrado em Física Aplicada à Medicina e Biologia" target="_blank">Mestrado - FAMB</a>
 					</li>
 					
-					<li><a href="http://www.ffclrp.usp.br/posgraduacoes/fisica/doutoradoemfisicaaplicadaamedicinaebiologia.php" 
+					<li><a href="http://sites.usp.br/famb" 
 					title="Doutorado em Física Aplicada à Medicina e Biologia" target="_blank">Doutorado - FAMB</a>
 					</li>
 				</ul>
 			</li>
 			
 			<li <?= $pesquisa ;?> ><a href="pesquisa.php">pesquisa</a></li>
-			<!--<li <?= $quem ;?> ><a href="construcao.php">quem faz?</a></li>-->
 			
 			<li>
 				<a href="#">links úteis</a>
 				<ul>
 					<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>
 					<li><a href="http://sites.ffclrp.usp.br/cefim/" title="Página do Centro Estudantil da Física Médica" target="_blank">CEFIM</a></li>
-					<li><a href="http://correio.usp.br" target="_blank">Webmail</a></li>
+					<li><a href="http://email.usp.br" target="_blank">Webmail</a></li>
 					<li><a href="http://prpg.usp.br/famb" title="Página do programa de pós graduação FAMB" target="_blank">Página Pós FAMB</a></li>
 				</ul>		
 			</li>
@@ -61,5 +60,4 @@
 </header>
 <!-- end header -->
 
-<section>
 	
