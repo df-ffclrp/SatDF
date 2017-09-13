@@ -18,7 +18,7 @@ include("includes/header.php");
 			Departamento de Física (DF) da Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto (FFCLRP).</p>
 
 			<p>O Departamento de Física (DF) é responsável pelo curso de graduação em Física Médica, no período noturno, 
-			com duração mínima de cinco anos. Esse é o único curso de graduação em Física Médica do Brasil, os outros são ênfases ou especializações.</p>
+			com duração mínima de cinco anos. <p>
 
 			<p>O Departamento também oferece disciplinas da área de Física a outros cursos da FFCLRP e de outras unidades do Campus de Ribeirão Preto.</p>
 
