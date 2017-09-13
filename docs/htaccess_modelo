@@ -1,0 +1,11 @@
+# Redirecionamentos padrão.
+# Não publicados no repositório original por motivos de segurança
+
+# Semana de física médica 2017
+Redirect 301 /semanafisicamedica https://semanafisicamedica.wixsite.com/2017
+
+# Laboratórios
+Redirect 301 /inbrain https://inbrainlab.wixsite.com/inbrainlab
+Redirect 301 /biomag https://biomaglab.wordpress.com 
+Redirect 301 /giimus http://giimus.usp.br
+
