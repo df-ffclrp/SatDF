@@ -49,7 +49,7 @@
 					<li><a href="http://portal.ffclrp.usp.br" title="Portal da Filosofia" target="_blank">Portal Filô</a></li>
 					<li><a href="http://sites.ffclrp.usp.br/cefim/" title="Página do Centro Estudantil da Física Médica" target="_blank">CEFIM</a></li>
 					<li><a href="http://email.usp.br" target="_blank">Webmail</a></li>
-					<li><a href="http://prpg.usp.br/famb" title="Página do programa de pós graduação FAMB" target="_blank">Página Pós FAMB</a></li>
+					<li><a href="http://sites.usp.br/famb" title="Página do programa de pós graduação FAMB" target="_blank">Página Pós FAMB</a></li>
 				</ul>		
 			</li>
 			<li><a href="http://df.ffclrp.usp.br/sat/" title="Serviço de Atendimento Técnico" target="_blank">SAT</a></li>
