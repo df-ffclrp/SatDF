@@ -44,6 +44,7 @@ Parâmetros:
 
 function send_email($recipients,$id_os,$workshop,$url_os) {
 	require 'PHPMailerAutoload.php';
+	require 'config_email.php';
 
 	# Trata oficina de destino
 	if($workshop == 1) {
@@ -56,14 +57,14 @@ function send_email($recipients,$id_os,$workshop,$url_os) {
 
 	$mail->isSMTP();
 	$mail->CharSet="utf-8";
-	$mail->Host = 'smtp.host.com';
+	$mail->Host = $hostname;
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'my_email@host.com';         // SMTP username
-	$mail->Password = 'my_pass';                    // SMTP password
+	$mail->Username = $username;         // SMTP username
+	$mail->Password = $password;                    // SMTP password
 	$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 	$mail->Port = '587';
-	$mail->From = 'my_email@host.com';
-	$mail->FromName = 'My Real Name';
+	$mail->From = $from;
+	$mail->FromName = $fromName;
 	
 
 	# Fazer um FOR aqui para adicionar todos os destinatários
@@ -82,7 +83,10 @@ function send_email($recipients,$id_os,$workshop,$url_os) {
 
 	# Guardar estes para uso posterior
 	//$mail->addCC('girol@ffclrp.usp.br');
-	//$mail->addBCC('bcc@example.com');
+	
+	if(isset($bcc)){
+		$mail->addBCC($bcc);
+	}
 
 	$mail->WordWrap = 50;                                 	// Set word wrap to 50 characters
 
